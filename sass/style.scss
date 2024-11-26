@@ -1,0 +1,546 @@
+@use "reset";
+@use "responsive"as*;
+
+body{
+  background-color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  // font-family: 'Nunito', sans-serif;
+}
+
+h2{
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: bold;
+  color: #444444;
+  display:inline-block;
+  text-decoration: #99E5A5 underline 0.5em;
+  text-underline-offset: -0.2em;
+  text-decoration-skip-ink: none;
+}
+
+p{
+  color: #444444;
+}
+
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.call{
+  display: flex;
+  img{
+    height: 24px;
+    width: 24px;
+    margin-right: 4.78px;
+    @include responsive(sm){
+      height: 20px;
+      width: 20px;
+    }
+  }
+  a{
+    color: #21A937;
+    font-size: 24px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 20px;
+    text-decoration: none;
+    @include responsive(sm){
+      line-height: 13px;
+    }
+  }
+}
+
+.header{
+  .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 29px;
+    padding-bottom: 28px;
+    @include responsive(sm){
+      display: block;
+      text-align: center;
+    }
+  }
+  &_log{
+    width: 263px;
+    height: 73px;
+    @include responsive(sm){
+      width: 170px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+  &_info{
+    p{
+      font-size: 14px;
+      line-height: 20px;
+      height: 35px;
+      margin-bottom: 7px;
+      @include responsive(sm){
+        margin-bottom: 4px;
+      }
+    }
+    .call{
+      justify-content: flex-end;
+      @include responsive(sm){
+        justify-content: center;
+      }
+      p{
+        font-size: 24px;
+        @include responsive(sm){
+          font-size: 20px;
+          line-height: 13px;
+        }
+      }
+    }
+  }
+}
+
+.main{
+  &_mainvisual{
+    background-image: url(../img/fv-min.png);
+    height: 947px;
+    background-size: cover;
+    background-position: center center;
+    @include responsive (lg){
+      background-size: cover;
+      background-position: center center;
+      height: 600px;
+    }
+    @include responsive(sm){
+      background-position: bottom 45% right 25% ;
+    }
+  }
+  &_copy{
+    color: #444444;
+    font-weight: bold;
+    position: absolute;
+    top: 133px;
+    left: 211px;
+    writing-mode: vertical-rl;
+    @include responsive (sm){
+      position: absolute;
+      top:250px;
+      left: 20px;
+    }
+    h1{
+      background-color: #FFFFFF;
+      width: 102px;
+      height: 565px;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 34px;
+      letter-spacing: 8.5px;
+      padding-top: 18px;
+      line-height: 102px;
+      margin-left: 40px;
+      margin-top: 133px;
+      @include responsive (lg){
+        width: 80px;
+        height: 470px;
+        font-size: 24px;
+        margin: 70px 0 0 30px ;  
+        line-height: 80px;
+        @include responsive (sm){
+          width: 60px;
+          height: 420px;
+          line-height: 60px;
+          font-size: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+    span{
+      color: #21A937;
+    }
+  }
+  &_concept{
+    .container{
+      display: flex;
+      margin-top: 162px;
+      margin-bottom: 82px;
+      gap: 44px;
+      @include responsive(lg){
+        max-width: 950px;
+        margin-top: 0;
+        gap: 0;
+        @include responsive (sm){
+          display: inline;
+          text-align: center;
+          gap: 0;
+        }
+      }
+    }
+    &_text{
+      width: 50%;
+      padding-top: 30px;
+      width: 415px;
+      @include responsive (lg){
+        br{
+          display: none;
+        }
+      }
+      @include responsive (sm){
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        br{
+          display: none;
+        }
+      }
+      h2{
+        padding-top: 32px;
+        margin-right: 191px;
+        white-space: nowrap;
+        @include responsive(lg){
+          font-size: 20px;
+          margin-right: 135px;
+        }
+        @include responsive (sm){
+          display: block;
+          margin-right: 0;
+        }
+      }
+      .lead{
+        font-size: 16px;
+        line-height: 38px;
+        margin-top: 37px;
+        @include responsive(lg){
+          line-height: 30px;
+          width: 95%;
+        }
+      }
+    }
+    &_img{
+      width: 50%;
+      padding-right:5%;
+      display: flex;
+      align-items: center;
+      @include responsive (sm){
+        width: 90%;
+        padding-right: 0;
+        margin: 0 auto;
+      }
+      img{
+        @include responsive(lg){
+          width: 100%;
+          margin-top: 85px;
+        }
+        @include responsive (sm){
+          margin-top: 60px;
+        }
+      }
+    }
+  }
+  &_nav{
+    text-align: center;
+    background-color: #F5FCF8;
+    h2{
+      margin: 78px 0 70px 0;
+    }
+    p{
+      font-size: 16px;
+      line-height: 38px;
+      margin-bottom: 34px;
+    }
+    ol{
+      display: flex;
+      justify-content: space-between;
+      @include responsive (sm){
+        flex-flow: column;
+        margin: 0 auto;
+        row-gap: 10px ;
+      }
+    }
+    li{
+      font-weight: bold;
+      line-height: 38px;
+      width: 380px;
+      height: 591px;
+      border: solid 2px #C9C9C9;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      padding-top: 40px;
+      position: relative;
+      @include responsive(lg){
+        width: 32%;
+        height: 700px;
+      @include responsive (sm){
+        width: 100%;
+        height: auto;
+      }
+      }
+      h3{
+        font-size: 24px;
+        margin-bottom: 45px;
+        color: #444444;
+      }
+      p{
+        font-size: 16px;
+        text-align: left;
+        padding: 0 30px;
+        @include responsive (sm){
+          padding-bottom: 200px;
+        }
+      }
+      img{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: auto;   
+      }
+    }
+  }
+  &_news{
+    background-color: #F5FCF8;
+    text-align: center;
+    padding-bottom: 112px;
+    h2{
+      margin: 82px 0 70px 0;
+      text-align: center;
+    }
+    dl{
+      height: auto;
+      line-height: 38px;
+      background-color: #FFFFFF;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 30px;
+      padding: 30.5px 66px 0 66px;
+      width: auto;
+      @include responsive (sm){
+        padding: 20px;
+      }
+    }
+    &_all{
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: #444444;
+      text-align: right;
+      padding: 39.5px 0 46px;
+      @include responsive (sm){
+        padding: 0 0 9px 0;
+      }
+      a{
+        display: block;
+        margin-top: 0px;
+        position: relative;
+        @include responsive (sm){
+          margin-right: 10%;
+        }
+      }
+      a::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -24px;
+        transform: translateY(-50%);
+        border: 8px solid transparent;
+        border-left: 10px solid #444444;
+      }
+    }
+    &_summary{
+      display: flex;
+      border-bottom: 2px solid #E7E7E7;
+      padding: 19.5px;
+      @include responsive (sm){
+        flex-flow: column;
+      }
+      dt{
+        color: #21A937;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 36px;
+        white-space: nowrap;
+        @include responsive (sm){
+          font-size: 15px;
+          line-height: 15px;
+          margin-bottom: 10px;
+          text-align: left;
+        }
+        span{
+          display: inline-block;
+          font-size: 12px;
+          font-weight: normal;
+          line-height: 25px;
+          color: #FFFFFF;
+          width: 80px;
+          height: 25px;
+          background-color: #444444;
+          margin-left: 30px;
+          @include responsive (sm){
+            font-size: 10px;
+            margin-left: 8px;
+            line-height: 25px;
+            width: 60px;
+            text-align: center;
+          }
+        }
+      }
+      dd{
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 30px;
+        text-align: left;
+        line-height: 38px;
+        color: #444;
+        @include responsive (sm){
+          font-size: 12px;
+          line-height: 14px;
+          text-align: left ;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.footer{
+  margin: 0 auto;
+  .container{
+    display: flex;
+    padding-top: 196px;
+    padding-bottom: 163px;
+    @include responsive(lg){
+      height: auto;
+      width: auto;
+      @include responsive (sm){
+        flex-flow: column;
+        align-items: center;
+        padding: 112px 0;
+        gap: 30px;
+      }
+    }
+  }
+  &_map{
+    width: 50%;
+    @include responsive (sm){
+      width: 100%;
+      margin: 0 auto;
+    }
+    &_nomal{
+      margin-right: 34px;
+      @include responsive(lg){
+        display: none;
+      }
+    } 
+      &_lg{
+      display: none;
+      @include responsive(lg){
+        margin-right: 34px;
+        display: block;
+        width: 50%;
+        text-align: right;
+        @include responsive(sm){
+          display: none;
+        }
+      }
+    }
+    &_sm{
+      display: none;
+      @include responsive(sm){
+        display: block;
+      }
+    }
+  }
+  &_address{
+    font-size: 16px;
+    color: #444444;
+    margin: 25px 0;
+    display: flex;
+    gap: 16px;
+    @include responsive(sm){
+      display: block;
+      text-align: center;
+      line-height: 16px;
+    }
+  }
+  .call{
+    @include responsive(sm){
+      padding-bottom: 20px;
+      justify-content: center;
+    }
+  }
+  &_table{
+    color: #444444;
+    font-size: 14px;
+    width: 533px;
+    line-height: 38px;
+    @include responsive(lg){
+      width: 100%;
+    }
+    &_contents{
+      border-bottom: 2px solid #e7e7e7;
+      padding-bottom: 19px;
+      @include responsive(sm){
+        padding-bottom: 0;
+      }
+    }
+    &_contents,&_contents_time{
+      display: flex;
+      @include responsive(lg){
+        display: block;
+      }
+      &_time{
+        margin-bottom: 20px;
+        padding-top: 19px;
+        border-top: 2px solid #e7e7e7;
+        @include responsive(sm){
+          padding-top: 0;
+        }
+      }
+    }
+    &_title{
+      width: 84.5px;
+      border-right: 2px solid #e7e7e7;
+      @include responsive(lg){
+        border-right: none;
+        border-bottom: 2px solid #e7e7e7;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    &_items{
+      &_item{
+        display: flex ;
+        &_day,&_day_line{
+          margin:0 23px 0 28.5px;
+          &_line{
+            text-decoration: #99E5A5 underline 0.5em;
+            text-underline-offset: -0.2em;
+            @include responsive(lg){
+              margin-left: 0;
+            }
+          }
+        }
+        &_day{
+          @include responsive(lg){
+            margin: 0 auto;
+          }
+        }
+        &_am{
+          margin-right: 17px;
+        }
+      }
+    }
+  }
+  .copyright{
+    text-decoration: none;
+    font-size: 11px;
+    color: #444444;
+    text-align: right;
+    @include responsive(sm){
+      text-align: center;
+    }
+  }
+  span{
+    display: block;
+    margin-top: 21.5px;
+  }
+}
+
+

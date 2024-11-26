@@ -1,0 +1,12 @@
+@mixin responsive($size){
+  $with:0;
+  @if($size==lg){
+    $with:1300px;
+  }
+  @else if($size==sm){
+    $with:760px;
+  }
+  @media screen  and(max-width:$with){
+    @content;
+  }
+}
